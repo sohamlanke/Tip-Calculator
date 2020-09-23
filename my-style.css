@@ -1,0 +1,50 @@
+body{
+	  background: linear-gradient(to left, #8E0E00, #1F1C18);
+}
+#Container{
+	height: 500px;
+	width: 300px;
+	background-color: white;
+	margin: 100px auto;
+	border-radius: 20px;
+}
+h1{
+	background: #1F030C;
+	color: white;
+	text-align: center;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	font-size: 20px;
+	padding: 10px;
+}
+#Calculator{
+	padding-right: 20px;
+	padding-left: 20px;
+}
+#btn{
+	margin: 30px auto;
+	height: 40px;	color: white;
+	width: 250px;
+	background-color: #AD133A;
+	font-size: 17px;
+	text-transform: capitalize;
+	font-weight: bold;
+	border-radius: 5px;
+	border-color: white;
+}
+.dropdown
+{
+	display: none;	
+}
+.servicemenu:hover .dropdown
+{
+	display: block;
+}
+.servicemenu ul li
+{
+	color: black;
+}
+.servicemenu ul
+{
+	list-style: none;
+}
