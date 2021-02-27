@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tip Calculator</title>
+	<link rel="stylesheet" type="text/css" href="my-style.css">
+</head>
+<body>
+
+	<div id = "Container">
+		<h1>Tip calculator</h1>
+		<div id = "Calculator">
+			<form>
+
+			<p>How much was your bill?</p>
+			<input id = "bill_amt" type="text" name="amount" placeholder="Bill amount">
+			<p>How was your service?</p>
+			<select id="tip">
+				<option value="20">Excellent (20%)</option>
+				<option value="10">Very Good (10%)</option>
+				<option value="5">Good (5%)</option>
+				<option value="0">Bad (0%)</option>
+			</select>
+			<p>How many people are sharing the bill?</p>
+			<input id="people" type="text" name="amount" placeholder="Number of people"> people
+			</form>
+			<button id="btn" onclick="cal()">Calculate</button>
+			<br>
+			<p style="text-align: center;" id="result"></p>
+
+		</div>
+	</div>
+
+</body>
+</html>
+<script>
+	document.getElementById("people").defaultValue = 1;
+	function cal(){
+		var amt = document.getElementById("bill_amt").value;
+		var people = document.getElementById("people").value;
+		var tip = document.getElementById("tip");
+		var pi = tip.options[tip.selectedIndex].value;
+		var ans = (amt/1+(amt/100)*pi)/people;
+		document.getElementById("result").innerHTML = "₹"+ans.toFixed(2) +" per person";
+	
+
+		// alert(amt);
+	}
+</script>
